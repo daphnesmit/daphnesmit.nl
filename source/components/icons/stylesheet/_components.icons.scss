@@ -1,0 +1,43 @@
+$size: 15vw;
+$darken: 10%;
+$max-size: 6rem;
+$socials: (
+  codepen: $color-black,
+  generic: $color-gun,
+  github: $color-black,
+  instagram: #517fa4,
+  linkedin: #007bb6,
+  spotify: #2ebd59,
+  twitter: #55acee,
+);
+
+.c-icons {
+  margin: $max-size * 0.1;
+  transition: 0.5s ease;
+  height: $size;
+  width: $size;
+  max-width: $max-size;
+  max-height: $max-size;
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+    fill: $color-gun;
+  }
+}
+
+@each $social, $color in $socials {
+  .icons--#{$social} {
+    // background: $color;
+    &:focus,
+    &:hover {
+      // background: darken($color, $darken);
+      svg {
+        fill: $color;
+      }
+    }
+  }
+}

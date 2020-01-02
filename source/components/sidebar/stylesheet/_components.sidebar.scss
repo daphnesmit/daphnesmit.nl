@@ -1,0 +1,67 @@
+$transTime: 200ms;
+
+.c-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sidebar__drag {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  width: calc(100vh / 25);
+  left: calc(100vh / 30);
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out;
+
+  .is--open &,
+  .is--dragging & {
+    opacity: 0;
+  }
+}
+
+.sidebar__svg {
+  .s-path {
+    cursor: grab;
+  }
+}
+
+.sidebar__content {
+  z-index: -1;
+  position: absolute;
+  top: calc(100vh / 30);
+  left: 0;
+  width: calc(100vh / 5);
+  height: 100vh;
+  padding-top: 1rem;
+  opacity: 0;
+  transition: opacity $transTime, z-index 0s 0s;
+  background-color: #e9eaf3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.is--active {
+    z-index: 2;
+    opacity: 1;
+  }
+}
+
+.sidebar__item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+}

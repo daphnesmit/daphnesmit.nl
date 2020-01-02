@@ -1,0 +1,15 @@
+.o-page-content {
+  margin-right: 30px;
+
+  @include screen-mobile-plus-and-bigger {
+    margin-right: 0;
+  }
+}
+
+.o-intro-text {
+  color: $color-white;
+  font-size: 2.4rem;
+  margin-top: 40px;
+  width: 100%;
+  font-family: 'Caveat', cursive;
+}

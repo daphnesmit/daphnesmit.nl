@@ -1,0 +1,15 @@
+$header-transition-time: 400ms;
+$header-transition-ease: $ease-in-out-quad;
+
+.c-header {
+  // Header component
+  padding: 10px 0;
+  position: relative;
+}
+
+.header__logo {
+  svg {
+    width: 87px;
+    height: 23px;
+  }
+}
