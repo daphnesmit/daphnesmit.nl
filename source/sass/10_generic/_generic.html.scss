@@ -12,6 +12,7 @@ html {
   font-size: $font-size-root;
   color: $color-text;
   min-height: 100%;
+  height: 100%;
 
   &.no--scroll {
     overflow-y: hidden !important;
@@ -23,13 +24,17 @@ body {
   line-height: $font-line-height-body;
   hyphens: auto;
   word-break: normal;
-  display: flex;
 
+  height: 100%;
+  background: #222;
+}
+
+main {
+  height: 100%;
+  width: 100%;
   justify-content: flex-end;
   align-items: center;
-  height: 100vh;
-  background: #222;
-
+  display: flex;
   @include screen-mobile-plus-and-bigger {
     justify-content: center;
   }

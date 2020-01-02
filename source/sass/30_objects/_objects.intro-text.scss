@@ -1,5 +1,10 @@
 .o-page-content {
   margin-right: 30px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 
   @include screen-mobile-plus-and-bigger {
     margin-right: 0;
